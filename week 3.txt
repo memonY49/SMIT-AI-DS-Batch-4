@@ -1,3 +1,7 @@
+
+
+
+
 escape characters: 
 	\" = "
 	\' = '
@@ -5,6 +9,7 @@ escape characters:
 	\t = one tab space
 	\b = backspace
 	\r = carriage return
+	\\ = 
 
 
 String Functions:
@@ -25,8 +30,27 @@ String Functions:
 	join() "It joins tow strings like same as + operator do"
 	split(string by which to split) "It splits or breaks the string from the given string 
 	lstrip(): "It removes all extra spaces and line breaks in a string from its left side only"
-	rstrip(): "It removes all extra spaces and line breaks in a string from its Right side only"
+	rstrip(): "It removes all extra spaces and line breaks in a cu a its Right side only"
 	replace(replacing string, replacing with)
 	strip() "It removes all extra spaces and line breaks in a string"
 	swapcase()
 	title()
+
+
+
+
+Conditional Statements:
+	if statements:
+		syntax: if condition:
+			---- body of if
+	else statement:
+		syntax:	else:
+			---- body of else.
+
+
+
+
+
+
+
+
