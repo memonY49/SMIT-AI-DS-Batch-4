@@ -57,20 +57,9 @@ if number % 2 == 0:
     print(f"The number = {number} is even")
 else:
     print(f"The number = {number} is odd")
-    
 
 
 
-
-
-
-
-# task 3
-# step 1: create 5 variables named as (Name,Fname,phone,email and pass)
-# step 2: create 2 more variables named as (useremail and userpass) and get
-#         email and password from the user using input()
-# step 3: create a condition if email matches from the email variable
-#         print user found else user not found!
 
 
 
