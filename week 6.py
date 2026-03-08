@@ -14,29 +14,32 @@ while True:
     user_selection = int(input("Enter your selection: "))
 
     if user_selection == 1:
-        amount = int(input("Please enter your number: "))
-        note5000 = 0
-        note1000 = 0
-        note500 = 0
-    
-        if amount % 500 == 0:
-            note5000 = int(amount/5000)
-            amount = amount%5000
-    
-            note1000 = amount//1000
-            amount = amount%1000
-    
-            note500 = amount/500
-    
-            print(f"note for 5000: {note5000}")
-            print(f"note for 1000: {note1000}")
-            print(f"note for 500: {note500}")
-        else:
-            print("Invailed entry!!!")
+        while True:
+            amount = int(input("Please enter your number: "))
+            note5000 = 0
+            note1000 = 0
+            note500 = 0
+        
+            if amount % 500 == 0:
+                note5000 = int(amount/5000)
+                amount = amount%5000
+        
+                note1000 = amount//1000
+                amount = amount%1000
+        
+                note500 = amount/500
+        
+                print(f"note for 5000: {note5000}")
+                print(f"note for 1000: {note1000}")
+                print(f"note for 500: {note500}")
+                break
+            else:
+                print("Invailed entry!!!")
+                
     elif user_selection == 0:
         exit(0)
-
 '''
+
 '''
 Nasted Loops:
     Loop inside a loop.
@@ -52,12 +55,77 @@ Nasted Loops:
 12345
 12345
 12345
-'''
 
-for row in range(5):
+
+1
+12
+123
+1234
+12345
+
+
+
+
+
+for row in range(3):
     for col in range(1,6):
         print(col,end = '')
-    print()
+    print('')
+
+'''
+
+
+
+"""
+step1: Add three options at start where options are:
+        1.Login
+        2.check user
+        0.exit
+step2: Create a user log in program where you need to store 5 variables
+        named as(Name,Fname,Email,Cnic and pass)
+step3: than takes 2 variables as an input for useremail and userpass
+        if password is matched print all details of that user.
+step4: if the user enters incorrect pass for 3 times you need to show a
+        message
+        "You had entered wrong password for 3 time and you are blocked.
+        please call the helpline".
+"""
+while True:
+    selection = int(input("1.Login\n2.Check user\n0.Exit\n\
+Please enter your selection: "))
+    name = 'abc'
+    fname = 'efg'
+    cnic = '5376782963'
+    email = 'abc@gmail.com'
+    password = 'abc123'
+    status = 'unblocked'
+
+    if selection == 1:
+        useremail = input("Please Enter your email: ")
+        if status == 'unblocked'
+            if useremail == email:
+                for i in range(1,4):
+                    userpass = input("Please Enter your pass: ")
+                    if userpass == password:
+                        print(f"Name: {name}\nFname: {fname}\nCnic: {cnic}\nEmail: {email}")
+                        break
+                    else:
+                        print(f"Incorrect Password {i}..")
+                else:
+                    print("You had entered wrong password for 3 time and you are blocked. \
+                    please call the helpline")
+                    status = 'blocked'
+    elif selection == 2:
+        useremail = input("Please Enter your email: ")
+        if useremail == email:
+            print(f"Your account is {status}")
+    elif selection == 0:
+        exit()
+    else:
+        print("Wrong selection...")
+
+
+
 
 
 
