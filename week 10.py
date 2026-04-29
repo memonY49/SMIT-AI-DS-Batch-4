@@ -87,7 +87,7 @@ try:
             print(user)
     file.close()
 except FileNotFoundError as e:
-    print("Wromg File name!")
+    print("Wromg File name!",e)
 '''
 '''
 write'''
