@@ -42,32 +42,88 @@
 # animal.runing()
 
 
+# class animal:
+#     eyes = 2                # static variable
+#     def __init__(self):
+#         self.legs = 0       # object level variable
+#         self.hair = False
+
+#     def running(self):          # static method of if not self as perameter
+#         print("animal is running")
+
+# dog = animal()
+# cat = animal()
+# lizard = animal()
+
+# print(animal.legs)
+
+# animal.eyes = 3
+# dog.legs = 4
+# cat.legs = 3
+# lizard.legs = 2
+
+
+# print(dog.legs)
+# print(cat.legs)
+# print(lizard.legs)
 
 
 
+class student:
+    def __init__(self,name, fname, id):
+        self.name = name
+        self.fname = fname
+        self.id = id 
 
-class animal:
-    eyes = 2                # static variable
+    def print_std(self):
+        print(f"Name: {self.name},Fname: {self.fname},ID: {self.id}")
+
+class list_of_std:
     def __init__(self):
-        self.legs = 0       # object level variable
-        self.hair = False
+        self.all_stds = []
+    def add_std(self,std) -> None:
+        self.all_stds.append(std)
 
-    def running():          # static method of if not self as perameter
-        print("animal is running")
+    def delete_std(self,index:int) -> student:
+        return self.all_stds.pop(index)
+    
+    def print_all_stds(self) -> None:
+        for stds in self.all_stds: 
+            stds.print_std()
 
-dog = animal()
-cat = animal()
-lizard = animal()
-
-print(animal.legs)
-
-animal.eyes = 3
-dog.legs = 4
-cat.legs = 3
-lizard.legs = 2
+std1 = student("Yasir","Nawaz","001")
+std2 = student("Ahmed","Ali","002")
+std3 = student("Zeeshan","Ali","003")
 
 
-print(dog.legs)
-print(cat.legs)
-print(lizard.legs)
+
+my_std_list = list_of_std()
+
+my_std_list.add_std(std1)
+my_std_list.add_std(std2)
+my_std_list.add_std(std3)
+
+my_std_list.print_all_stds()
+print("*"*20)
+deleted = my_std_list.delete_std(1)
+deleted.print_std()
+print("*"*20)
+my_std_list.print_all_stds()
+
+
+# std1.name = "Yasir"
+# std2.name = "Ahmed"
+# std3.name = "Ali"
+
+# std1.print_std()
+# std2.print_std()
+# std3.print_std()
+
+
+
+
+
+
+
+
 

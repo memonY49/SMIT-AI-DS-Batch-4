@@ -113,17 +113,17 @@ for i in range(len(data)):
 else:
     print("User not found!!")
 '''
-a = [[[11,12,13],
-      ['a1','a2','a3'],
-      ['b1','b2','b3']],
-     [[21,22,23],
-      ['c1','c2','c3'],
-      ['d1','d2','d3']],
-     [[31,32,33],
-      ['e1','e2','e3'],
-      ['f1','f2','f3']]]
+# a = [[[11,12,13],
+#       ['a1','a2','a3'],
+#       ['b1','b2','b3']],
+#      [[21,22,23],
+#       ['c1','c2','c3'],
+#       ['d1','d2','d3']],
+#      [[31,32,33],
+#       ['e1','e2','e3'],
+#       ['f1','f2','f3']]]
 
-print(a[0][1][2])
+# print(a[0][1][2])
 
 '''
 data = [[['Company','Car name','Model','Year',Price],
@@ -170,8 +170,10 @@ Task for week 8: showroom managment system.
 
 
 
+mylist = ["a1","a2","a3"]
 
-
+for index,item in enumerate(mylist):
+    print(f"{index+1}. {item}")
 
 
 
