@@ -39,6 +39,27 @@ class calculate:
         return self
     def __isub__(self, other):
         pass
+    def __lt__(self, other):
+        pass
+        
+    def __gt__(self, other):
+        pass
+    def __le__(self, other):
+        pass
+    def __ge__(self, other):
+        pass
+    def __eq__(self, value):
+        pass
+    def __ne__(self, value):
+        pass        
+    def __and__(self, other):
+        pass
+    def __or__(self, value):
+        pass
+
+    
+        
+    
 
 cal = calculate([3,6])
 cal1 = calculate([4,6])
@@ -98,10 +119,64 @@ class cart:
         recipt += f"total items: {len(self.items)} || total bill: {self.total_bill}"
         return recipt
     
-mycart = cart()
-mycart += {"name":"watch","price":1500,"qty":1}
-mycart += {"name":"brush","price":30,"qty":10}
+# mycart = cart()
+# mycart += {"name":"watch","price":1500,"qty":1}
+# mycart += {"name":"brush","price":30,"qty":10}
 
-# mycart -= {"name":"brush","price":30,"qty":10}
-# mycart -= 2
+# # mycart -= {"name":"brush","price":30,"qty":10}
+# # mycart -= 2
+# print(mycart)
+
+
+
+class item:
+    def __init__(self,name:str, price:int, qty:int):
+        self.name = name
+        self.price = price
+        self.qty = qty
+
+class cart:
+    def __init__(self):
+        self.itemlist = []
+        self.total = 0
+
+    def __iadd__(self, other):
+        self.itemlist.append(other)
+        self.total += other.price * other.qty
+        return self
+    
+    def __isub__(self, other:tuple):
+        index = other[0] - 1
+        re_item = self.itemlist[index]
+        if other[1] <= re_item.qty:
+            re_item.qty -= other[1]
+            self.total -= re_item.price * other[1]
+            if re_item.qty == 0:
+                self.itemlist.pop(index)
+            else:
+                self.itemlist[index] = re_item
+            return self
+        else:
+            return self
+    
+    def __str__(self):
+        recipt = ""
+        for index,i in enumerate(self.itemlist):
+            recipt += f"{index+1} || {i.name} || {i.price} || {i.qty}\n"
+        recipt += f"total items: {len(self.itemlist)} || total bill: {self.total}"
+        return recipt
+        
+        
+
+
+item1 = item("soup",120,5)
+item2 = item("ring",350,2)
+
+mycart = cart()
+
+mycart += item1
+mycart += item2
+mycart -= (1,2)
+
 print(mycart)
+
