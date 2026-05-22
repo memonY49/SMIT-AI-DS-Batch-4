@@ -155,9 +155,7 @@ class cart:
                 self.itemlist.pop(index)
             else:
                 self.itemlist[index] = re_item
-            return self
-        else:
-            return self
+        return self
     
     def __str__(self):
         recipt = ""
