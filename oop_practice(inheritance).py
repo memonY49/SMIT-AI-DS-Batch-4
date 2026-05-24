@@ -16,30 +16,30 @@
 
 
 
-# class animal:
-#     def __init__(self):
-#         self.legs = 0
-#         self.eyes = 2
-#         self.tail = False
-#     def sound(self):
-#         print("animal sound")
-#     def eat(self):
-#         print("animal is eating")
-
-# class dog(animal):
-#     def __init__(self):
-#         pass
-#     def sound(self):
-#         print("dog is barking...!")
+class animal:
+    def __init__(self):
+        self.legs = 0
+        self.eyes = 2
+        self.tail = False
+    def sound(self):
+        print("animal sound")
     
+    def eat(self):
+        print("animal is eating")
 
-# class cat(animal):
-#     def __init__(self):
-#         pass
+class dog(animal):
+    def __init__(self):
+        pass
+    def sound(self):
+        print("Dog is barking....")
 
-# my_dog1 = dog()
+class cat(animal):
+    def __init__(self):
+        pass
 
-# my_dog1.sound()
+my_dog1 = dog()
+
+my_dog1.sound()
 
 
 # class person:
@@ -77,39 +77,39 @@
 
 
 
-class vehical:
-    def __init__(self):
-        self.wheels = 4
-        self.engine = ""
-        self.doors = 2
-        self.spark = False
-        self.gear = 0
-        self.air_val = False
-        self.fuel_injection = False
-
-    def ignition(self):
-        self.air_val = True
-        self.fuel_injection = True
-        self.spark = True
-    def start(self):
-        self.ignition()
-    def set_gear(self,g:int):
-        self.gear = g
-
-    def br(self,g:int):
-        self.set_gear(g)
-
-
-
-mycar = vehical()
-
-mycar.start()
-mycar.br(3)
-
-
-
-# class person:
+# class vehical:
 #     def __init__(self):
+#         self.wheels = 4
+#         self.engine = ""
+#         self.doors = 2
+#         self.spark = False
+#         self.gear = 0
+#         self.air_val = False
+#         self.fuel_injection = False
+
+#     def ignition(self):
+#         self.air_val = True
+#         self.fuel_injection = True
+#         self.spark = True
+#     def start(self):
+#         self.ignition()
+#     def set_gear(self,g:int):
+#         self.gear = g
+
+#     def br(self,g:int):
+#         self.set_gear(g)
+
+
+
+# mycar = vehical()
+
+# mycar.start()
+# mycar.br(3)
+
+
+
+# # class person:
+# #     def __init__(self):
 #         self.name = ""
 #         self.age = 0
 #         self.fname = ""
@@ -131,35 +131,35 @@ mycar.br(3)
 # print(p2.get_all_attr("age"))
 
 
-class human:
-    def __init__(self,color,legs=2,eyes=2,hair=True,hands = 2):
-        self.color = color
-        self.legs = legs
-        self.eyes = eyes
-        self.hair = hair
-        self.hands = hands
-class person:
-    def __init__(self,name,age,fname,gender,**kwargs):
-        super().__init__(**kwargs)
-        self.name = name
-        self.age = age
-        self.fname = fname
-        self.gender = gender
+# class human:
+#     def __init__(self,color,legs=2,eyes=2,hair=True,hands = 2):
+#         self.color = color
+#         self.legs = legs
+#         self.eyes = eyes
+#         self.hair = hair
+#         self.hands = hands
+# class person:
+#     def __init__(self,name,age,fname,gender,**kwargs):
+#         super().__init__(**kwargs)
+#         self.name = name
+#         self.age = age
+#         self.fname = fname
+#         self.gender = gender
     
-class student(person,human):
-    def __init__(self,id,cl,**kwargs):
-        super().__init__(**kwargs)
-        self.id = id
-        self.cl = cl
-    def setter(self,n,v):
-        super().__setattr__(n,v)
-    def getter(self,n):
-        return super().__getattribute__(n)
+# class student(person,human):
+#     def __init__(self,id,cl,**kwargs):
+#         super().__init__(**kwargs)
+#         self.id = id
+#         self.cl = cl
+#     def setter(self,n,v):
+#         super().__setattr__(n,v)
+#     def getter(self,n):
+#         return super().__getattribute__(n)
 
 
-std1 = student("001","1st",name="yasir",age=27,fname="nawaz",gender="male",color="brown")
+# std1 = student("001","1st",name="yasir",age=27,fname="nawaz",gender="male",color="brown")
 
-p2 = person("ahmed",30,"ali","male")
+# p2 = person("ahmed",30,"ali","male")
 
 
-print(std1.getter("color"))
+# print(std1.getter("color"))

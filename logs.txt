@@ -1,3 +1,14 @@
-desplaymessage function is called.
-wrapper function is called.
-2026-05-19 18:49:55.002303:: wrapper function is called.
+2026-05-24 19:20:23.231027 add_book is called.
+2026-05-24 19:20:23.231027 add_book is called.
+2026-05-24 19:20:23.231027 borrow is called.
+2026-05-24 19:20:23.232035 add_record is called.
+2026-05-24 19:20:23.233061 return_book is called.
+2026-05-24 19:20:23.233061 add_book is called.
+2026-05-24 19:20:23.233061 add_record is called.
+2026-05-24 19:21:16.387229 add_book is called.
+2026-05-24 19:21:16.388253 add_book is called.
+2026-05-24 19:21:16.388253 borrow is called.
+2026-05-24 19:21:16.388253 add_record is called.
+2026-05-24 19:21:16.389263 return_book is called.
+2026-05-24 19:21:16.389263 add_book is called.
+2026-05-24 19:21:16.390274 add_record is called.
