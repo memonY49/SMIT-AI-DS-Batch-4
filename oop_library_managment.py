@@ -56,9 +56,6 @@ def track_action(func):
     return wrapper
 
 
-
-
-
 class Book:
     def __init__(self,title:str,author:str,pages:int):
         self.title = title
@@ -111,7 +108,6 @@ class library:
     def add_record(self,book,act):
         with open("record.txt","a") as file:
             file.write(f"{dt.now()} {book.title} ({act})\n")
-
 
 b1 = Book("Atitude is everything","Jeff Keller",100)
 eb1 = EBook(file_size=25.5,title="Atitude is everything",author = "Jeff Keller",pages = 100)

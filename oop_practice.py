@@ -44,21 +44,21 @@
 # # animal.runing()
 
 
-class animal:
-    eyes = 2                # static variable
-    def __init__(self):
-        self.legs = 0       # object level variable
-        self.hair = False
+# class animal:
+#     eyes = 2                # static variable
+#     def __init__(self):
+#         self.legs = 0       # object level variable
+#         self.hair = False
 
-    def running(self):          # static method of if not self as perameter
-        print("animal is running")
+#     def running(self):          # static method of if not self as perameter
+#         print("animal is running")
 
 
-dog = animal()
+# dog = animal()
 # print(dog.legs)
-dog.running()
-cat = animal()
-lizard = animal()
+# dog.running()
+# cat = animal()
+# lizard = animal()
 
 # # print(animal.legs)
 
@@ -135,51 +135,5 @@ lizard = animal()
 # Implement magic methods like __str__(),__len__(),and __add__() for display and manage 
 # book data.
 # store all borrowing and returning records in book_record.txt.
-
-
-## Problem Statement: Library Management System
-
-# ### System Requirements
-
-# 1. Create a decorator named `track_action` that:
-
-#    * Prints a message whenever a function starts and ends.
-#    * Saves all activity logs into a file named `library_logs.txt`.
-
-# 2. Create a base class named `Book` with:
-
-#    * Attributes:
-#      * `title`
-#      * `author`
-#      * `pages`
-
-# 3. Create a derived class named `EBook` that inherits from `Book`.
-#    * Add an additional attribute:
-#      * `file_size`
-
-# 4. Implement the following methods:
-
-#    * `borrow_book()`
-#    * `return_book()`
-
-#    Apply the decorator to both methods.
-
-# 5. Implement the following magic methods:
-
-#    * `__str__()` → display book details in a readable format.
-#    * `__len__()` → return the total number of pages in the book.
-#    * `__add__(other)` → return the combined pages of two books.
-
-# 6. Implement file handling:
-
-#    * Create a file named `books_record.txt`.
-#    * Save book borrowing and return records into the file using append mode.
-
-# 7. In the main program:
-
-#    * Create multiple book and ebook objects.
-#    * Borrow and return books.
-#    * Demonstrate all magic methods.
-#    * Read and display contents of both files.
 
 
